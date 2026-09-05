@@ -1,0 +1,14 @@
+# Redirect index.php to about.php
+RewriteEngine On
+RewriteBase /
+
+# Redirect index.php to about.php
+RewriteRule ^index\.php$ about.php [R=301,L]
+
+# Make about.php the default index page
+DirectoryIndex about.php index.php
+
+# Optional: Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
