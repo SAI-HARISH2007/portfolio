@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sai Haresh Anand S — builds agent systems, then tries to break them</title>
+<meta name="description" content="B.Tech CS (AI & ML), IcfaiTech Hyderabad. I build autonomous and LLM-powered systems, then evaluate them adversarially and publish what breaks.">
+<meta name="author" content="Sai Haresh Anand S">
+<link rel="canonical" href="https://haresh.acadnet.net/portfolio/">
+<meta name="theme-color" content="#f5f6f8">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sai Haresh Anand S">
+<meta property="og:title" content="Sai Haresh Anand S — builds agent systems, then tries to break them">
+<meta property="og:description" content="Agent systems, adversarial evaluation, interpretability. Every claim on this site has a number and a repo behind it.">
+<meta property="og:url" content="https://haresh.acadnet.net/portfolio/">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/SAI-HARISH2007/portfolio@main/cdn/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="%VITE_ASSET_BASE%/fonts/archivo-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="%VITE_ASSET_BASE%/fonts/geistmono-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="%VITE_ASSET_BASE%/frames/lg/001.webp" as="image" type="image/webp" media="(min-width: 900px)">
+<link rel="preload" href="%VITE_ASSET_BASE%/frames/sm/001.webp" as="image" type="image/webp" media="(max-width: 899px)">
+<script type="module" src="/src/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sai Haresh Anand S",
+  "url": "https://haresh.acadnet.net/portfolio/",
+  "email": "mailto:saiharishanand2007@gmail.com",
+  "jobTitle": "Computer science student (AI & ML)",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "IcfaiTech, ICFAI University (IFHE), Hyderabad" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressCountry": "IN" },
+  "sameAs": [
+    "https://github.com/SAI-HARISH2007",
+    "https://www.linkedin.com/in/sai-haresh-anand-s-1943b223b/"
+  ]
+}
+</script>
+</head>
+<body>
+<!--
+THESIS: Verification is the product. The site proves it instead of saying it: every claim carries its measurement and a repo, and the open-source panel reads live from GitHub, including the zero merged PRs. Refuses the dark-terminal-with-neon AI template and the hero-metric trio.
+OWN-WORLD: Bright cool-white lab ground. Liquid chrome (prismatic, from a real render) lives only inside the letters of the name and in one full-bleed flood; everywhere else, hairlines and black ink. Archivo with its width axis doing the hierarchy (125 display, 100 body, 78 labels), Geist Mono strictly for numbers and measurements. One accent, ultramarine, reserved for live and interactive things.
+STORY: In five seconds: builds agent systems, audits them adversarially, publishes the failures. Believes it because of the numbers and the live PR state. Opens a repo or writes an email.
+FIRST VIEWPORT: Pinned hero. The name, set enormous, is a knockout through which a scroll-scrubbed chrome sequence moves. Scrolling grows the letters until the chrome floods the viewport, then a white sheet carries the thesis line. Primary action bottom-left, frame readout bottom-right.
+FORM: Scroll-scrubbed image sequence fused with type-as-mask; ranked first of seven; brief-pinned (bright, chrome, scroll-to-video).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+-->
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" data-nav>
+  <a class="nav__brand" href="#top">Sai Haresh Anand S</a>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#work">Work</a>
+    <a href="#archive">Archive</a>
+    <a href="#open-source">Open source</a>
+    <a href="#writing">Writing</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav__aside mono">
+    <span class="nav__readout" data-readout aria-live="off">F 001 / 080</span>
+    <span class="nav__clock" data-clock title="Local time in Hyderabad">HYD --:--</span>
+  </div>
+  <button class="nav__toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</header>
+<div class="menu" id="mobile-menu" data-menu hidden>
+  <a href="#work">Work</a>
+  <a href="#archive">Archive</a>
+  <a href="#open-source">Open source</a>
+  <a href="#writing">Writing</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main id="main">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top" aria-label="Introduction" data-hero>
+  <div class="hero__pin">
+    <img class="hero__poster" src="%VITE_ASSET_BASE%/media/poster.webp" alt="" width="1440" height="810" decoding="async" fetchpriority="high">
+    <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
+
+    <div class="hero__knockout" data-hero-knockout aria-hidden="true">
+      <div class="hero__name" data-hero-name><span>SAI</span><span>HARESH</span></div>
+    </div>
+
+    <div class="hero__ui" data-hero-ui>
+      <h1 class="visually-hidden">Sai Haresh Anand S</h1>
+      <p class="hero__lede">
+        I build agent systems, then try to break them. Second-year computer science student
+        at IcfaiTech Hyderabad, working on autonomous and LLM-powered systems and the
+        evaluation harnesses that decide whether they hold up.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#work" data-magnetic>
+          See the work
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="https://github.com/SAI-HARISH2007" rel="me">GitHub</a>
+      </div>
+    </div>
+
+    <p class="hero__meta mono" data-hero-meta>
+      <span>Hyderabad, IN</span>
+      <span>B.Tech CS (AI &amp; ML) · IcfaiTech</span>
+      <span>Class of 2029</span>
+    </p>
+    <p class="hero__scroll mono" data-hero-scroll aria-hidden="true">
+      <span class="hero__scrollbar"><i data-hero-progress></i></span>
+      Scroll to scrub
+    </p>
+
+    <div class="hero__sheet" data-hero-sheet>
+      <p class="hero__thesis">
+        The building is the easy half.<br>
+        <em>What I care about is whether it holds up when someone attacks it.</em>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THESIS ============================ -->
+<section class="thesis section" id="thesis" aria-labelledby="thesis-h">
+  <div class="wrap thesis__grid">
+    <h2 id="thesis-h" class="display" data-reveal>Verification is the product.</h2>
+    <div class="thesis__body">
+      <p data-reveal>
+        A model that is right most of the time is not the same as a system you can trust.
+        The difference is whether anything in the loop can <em>check</em>. So the systems I
+        build put deterministic code where correctness is knowable, and let the model handle
+        only the part that genuinely needs judgement.
+      </p>
+      <p data-reveal>
+        In <a href="https://github.com/SAI-HARISH2007/greenlight">greenlight</a> that meant a
+        gate the agent cannot talk its way past: no conclusion without an active probe
+        confirming the mechanism, and no remediation without a human approving it. It moved
+        root-cause accuracy from 83% to 100% across twelve seeded incidents.
+      </p>
+      <p data-reveal>
+        It also taught me the more useful lesson. My first version of that gate was eleven
+        lines and obviously correct, and it made the system worse, because a rejected agent
+        does not stop, it tries something else. It rolled back an unrelated production
+        deploy. Which is where the line below comes from.
+      </p>
+    </div>
+  </div>
+
+  <figure class="quote" data-reveal>
+    <video class="quote__wave" muted playsinline loop preload="none" poster="" data-lazy-video aria-hidden="true">
+      <source src="%VITE_ASSET_BASE%/media/wave.webm" type="video/webm">
+      <source src="%VITE_ASSET_BASE%/media/wave.mp4" type="video/mp4">
+    </video>
+    <blockquote class="quote__text">
+      Untested code in the control loop is more dangerous than an unverified model.
+    </blockquote>
+    <figcaption class="mono">greenlight, README · after the gate-v1 regression</figcaption>
+  </figure>
+</section>
+
+<!-- ============================ WORK ============================ -->
+<section class="work" id="work" aria-labelledby="work-h" data-work>
+  <div class="work__head wrap">
+    <h2 id="work-h" class="display" data-reveal>Six things, each with a number attached.</h2>
+    <p class="work__intro" data-reveal>
+      Where a project claims something, the claim is measured and the source is one click
+      away. Where a project failed, the failure is written down. Two are still in progress
+      and say so.
+    </p>
+  </div>
+  <div class="work__viewport" data-work-viewport>
+    <div class="work__track" data-work-track>
+      <!-- panels rendered from src/data/projects.js -->
+      <noscript><p class="wrap">The project panels need JavaScript. Everything is also on <a href="https://github.com/SAI-HARISH2007">GitHub</a>.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ARCHIVE ============================ -->
+<section class="archive section" id="archive" aria-labelledby="archive-h">
+  <div class="wrap archive__grid">
+    <header class="archive__head">
+      <h2 id="archive-h" class="display" data-reveal>Everything else I have built.</h2>
+      <p data-reveal>
+        The rest of my public repositories, oldest work included. These are smaller or earlier than
+        the six above, and each line says what the repo is, not what I wish it were. Forks I have
+        contributed to are in the open-source section.
+      </p>
+    </header>
+    <div>
+      <ol class="archive__list" data-archive-list aria-label="Projects">
+        <noscript><li class="arow"><a href="https://github.com/SAI-HARISH2007?tab=repositories"><span class="arow__body"><h3>All repositories on GitHub</h3></span></a></li></noscript>
+      </ol>
+      <div class="archive__scratch" data-reveal>
+        <p class="mono">Scaffolds and scratch repos · little original code</p>
+        <ul class="stack" data-archive-scratch></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ OPEN SOURCE ============================ -->
+<section class="oss section" id="open-source" aria-labelledby="oss-h" data-oss>
+  <div class="wrap oss__grid">
+    <header class="oss__head">
+      <h2 id="oss-h" class="display" data-reveal><span data-oss-headline>Eight pull requests. Zero merged.</span></h2>
+      <p data-reveal>
+        Patches to <a href="https://github.com/AOSSIE-Org/EduAid">AOSSIE’s EduAid</a>, including a
+        directory-traversal fix in the file upload path, plus one to matplotlib. This panel reads
+        the current state from GitHub each time the page loads, so it will say “merged” the day
+        it is true and not before.
+      </p>
+      <p class="oss__status mono" data-oss-status>Contacting api.github.com…</p>
+    </header>
+    <ol class="prs" data-oss-list aria-label="Pull requests">
+      <!-- rendered by src/github.js -->
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ WRITING ============================ -->
+<section class="writing section" id="writing" aria-labelledby="writing-h">
+  <div class="wrap writing__grid">
+    <header>
+      <h2 id="writing-h" class="display" data-reveal>Writing</h2>
+      <p data-reveal>Contributing writer at <a href="https://acadnews.com/">Academic News Network</a>. Three pieces so far.</p>
+    </header>
+    <ul class="pieces" data-writing-list></ul>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="about section" id="about" aria-labelledby="about-h">
+  <div class="wrap about__grid">
+    <figure class="about__photo" data-reveal>
+      <img src="%VITE_ASSET_BASE%/media/haresh.jpg" alt="Sai Haresh Anand S" width="553" height="709" loading="lazy" decoding="async">
+    </figure>
+    <div class="about__body">
+      <h2 id="about-h" class="display" data-reveal>Second year, and impatient about it.</h2>
+      <p data-reveal>
+        I am a B.Tech student in Computer Science (AI &amp; ML) at IcfaiTech, ICFAI University,
+        Hyderabad, Class of 2029, and concurrently enrolled in the IIT Madras online BS in Data
+        Science. Out of the house from 07:45 to 18:45 on weekdays, which is why everything on
+        this site was built in the hours around that.
+      </p>
+
+      <dl class="facts" data-reveal>
+        <div><dt>Now</dt><dd>Finishing activation-shield and writing it up. LeetCode most evenings. Chasing the EduAid patches to merge.</dd></div>
+        <div><dt>Next</dt><dd>GSoC 2027, second attempt. Applied in 2026 and was not selected; the plan this time is a human mentor before more PRs.</dd></div>
+        <div><dt>Built with</dt><dd>Claude Code, daily. Anything it produces is validated by tests before it ships. Runtime models in my projects are Gemini and Groq.</dd></div>
+        <div><dt>Elsewhere</dt><dd>Keyboardist, Astitva music club. Member of GDG On Campus IFHE, where I compete more than I organise. Speaks English, Hindi, Telugu, Tamil.</dd></div>
+      </dl>
+
+      <ul class="stack" data-reveal aria-label="Tools">
+        <li>Python</li><li>TypeScript</li><li>PyTorch</li><li>Transformers</li><li>FastAPI</li>
+        <li>Next.js</li><li>pandas / NumPy</li><li>WebSockets</li><li>SQLite / MySQL</li>
+        <li>pytest</li><li>mypy</li><li>Docker</li><li>Linux</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="contact section" id="contact" aria-labelledby="contact-h">
+  <div class="wrap contact__grid">
+    <header class="contact__head">
+      <h2 id="contact-h" class="display" data-reveal>Say hello.</h2>
+      <p data-reveal>Internships, open-source collaboration, research, or anything about the work here.</p>
+      <a class="contact__mail" href="mailto:saiharishanand2007@gmail.com" data-reveal>saiharishanand2007@gmail.com</a>
+      <ul class="contact__links" data-reveal>
+        <li><a href="https://github.com/SAI-HARISH2007" rel="me">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/sai-haresh-anand-s-1943b223b/" rel="me">LinkedIn</a></li>
+      </ul>
+    </header>
+
+    <form class="form" method="POST" action="%BASE_URL%contact.php" data-contact-form novalidate>
+      <p class="form__status" data-form-status role="status" hidden></p>
+      <div class="field">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="f-message">Message</label>
+        <textarea id="f-message" name="message" rows="6" required></textarea>
+      </div>
+      <div class="field field--trap" aria-hidden="true">
+        <label for="f-website">Leave this empty</label>
+        <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <button class="btn btn--primary" type="submit" data-submit>
+        <span>Send message</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <p>Sai Haresh Anand S · Hyderabad · <span data-year>2026</span></p>
+    <p class="foot__credit">
+      Built with Vite, GSAP and Lenis. Chrome footage by
+      <a href="https://www.pexels.com/@pachon-in-motion-426015731">Pachon in Motion</a> and waveform by
+      <a href="https://www.pexels.com/video/34645278/">Chandresh Uike</a>, via Pexels.
+      <a href="https://github.com/SAI-HARISH2007/portfolio">Source</a>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
