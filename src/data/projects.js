@@ -19,6 +19,27 @@ export const PROJECTS = [
     diagram: 'gate',
   },
   {
+    slug: 'playables',
+    name: 'Browser playables',
+    role: 'Three games, each a single HTML file with no engine and no libraries',
+    blurb:
+      'Gem Grove is a match-3 with cascade resolution and gravity refill. Pin Rescue is a pull-the-pin puzzle on fixed-timestep physics with impulse collision response. Sky Stack is a tap-timing stacker that slices overhang with interval math. All rendering and art is hand-rolled Canvas 2D, so each game is one index.html with zero asset files, live on GitHub Pages. Each ships URL-hash QA hooks so headless Chromium can screenshot-verify the win and lose paths.',
+    metrics: [
+      ['3', 'games, one HTML file each'],
+      ['120 Hz', 'fixed-timestep physics in Pin Rescue'],
+      ['0', 'libraries or asset files'],
+    ],
+    tags: ['JavaScript', 'Canvas 2D', 'Physics', 'GitHub Pages'],
+    repo: 'https://github.com/SAI-HARISH2007/gem-grove',
+    links: [
+      ['Play Gem Grove', 'https://sai-harish2007.github.io/gem-grove/'],
+      ['Play Pin Rescue', 'https://sai-harish2007.github.io/pin-rescue/'],
+      ['Play Sky Stack', 'https://sai-harish2007.github.io/sky-stack/'],
+    ],
+    note: 'Built Oct 2026 · solo',
+    diagram: 'playable',
+  },
+  {
     slug: 'activation-shield',
     name: 'activation-shield',
     role: 'Suppressing a trained deception at inference, without touching weights',
@@ -100,10 +121,12 @@ export const PROJECTS = [
 ];
 
 /* Snapshot of open-source PRs, used only when api.github.com is unreachable.
-   Verified 2026-09-04. */
+   Verified 2026-10-25. */
 export const PR_SNAPSHOT = {
-  asOf: '2026-09-04',
+  asOf: '2026-10-25',
   items: [
+    { repo: 'GreedyBear-Project/GreedyBear', number: 1730, title: 'Fix multi-value feature encoding in MLModel.score()', state: 'merged', url: 'https://github.com/GreedyBear-Project/GreedyBear/pull/1730' },
+    { repo: 'OWASP/Nettacker', number: 1730, title: 'Fix test isolation breaking HTML report tests', state: 'open', url: 'https://github.com/OWASP/Nettacker/pull/1730' },
     { repo: 'AOSSIE-Org/EduAid', number: 672, title: '[Backend] Add lightweight request tracing for upload and transcription', state: 'open', url: 'https://github.com/AOSSIE-Org/EduAid/pull/672' },
     { repo: 'AOSSIE-Org/EduAid', number: 667, title: '[Backend] Add content-based file validation (magic number checks)', state: 'open', url: 'https://github.com/AOSSIE-Org/EduAid/pull/667' },
     { repo: 'AOSSIE-Org/EduAid', number: 665, title: '[Backend] Add file upload validation and size limits', state: 'open', url: 'https://github.com/AOSSIE-Org/EduAid/pull/665' },

@@ -96,6 +96,22 @@ export const DIAGRAMS = {
     <text x="252" y="176" text-anchor="middle">limits live in code</text>
   </svg>`,
 
+  /* Playables: one file served to players and to a headless verifier. */
+  playable: `<svg viewBox="0 0 320 200" role="img" aria-label="One index.html goes to a phone browser and to headless Chromium, which drives the game through URL-hash QA hooks and screenshot-verifies the win and lose paths">
+    ${box(10, 84, 82, 32, 'index.html')}
+    ${arrow(92, 92, 128, 58)}
+    ${arrow(92, 108, 128, 142)}
+    <rect class="paper stroke" x="132" y="18" width="52" height="78" rx="9"/>
+    <rect class="ink" x="150" y="86" width="16" height="4" rx="2" opacity=".35"/>
+    <path class="soft" d="M140 34h36M140 46h36M140 58h36M140 70h36"/>
+    <text x="158" y="112" text-anchor="middle">phone, touch</text>
+    ${box(132, 128, 96, 30, '#pull=i,j', 'key')}
+    <text x="180" y="176" text-anchor="middle">URL-hash QA hooks</text>
+    ${arrow(228, 143, 252, 143, 'stroke key')}
+    ${box(252, 112, 58, 26, 'win ✓')}
+    ${box(252, 148, 58, 26, 'lose ✓')}
+  </svg>`,
+
   /* Sentinel: feeds into a globe, out to a cascade. */
   globe: `<svg viewBox="0 0 320 200" role="img" aria-label="News feeds enter a globe model; supply shocks propagate as an impact cascade with a deterministic fallback if the model fails">
     <circle class="paper stroke" cx="150" cy="100" r="62"/>

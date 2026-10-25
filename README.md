@@ -34,7 +34,7 @@ The web host has a weak FTP, so it only receives the small files. Heavy media is
 from this repository through jsDelivr, a free CDN that mirrors public GitHub repos:
 
 ```
-https://cdn.jsdelivr.net/gh/SAI-HARISH2007/portfolio@main/cdn/...
+https://cdn.jsdelivr.net/gh/SAI-HARISH2007/portfolio@master/cdn/...
 ```
 
 That URL is set in `.env.production` (`VITE_ASSET_BASE`). So a deploy is:
@@ -46,7 +46,7 @@ That URL is set in `.env.production` (`VITE_ASSET_BASE`). So a deploy is:
 
 Old hashed files in `assets/` can be deleted on the host whenever; the new `index.html` only references the new ones.
 
-jsDelivr caches `@main` for up to 12 hours. If a media file must change immediately, commit it under a new name.
+jsDelivr caches `@master` for up to 12 hours. If a media file must change immediately, commit it under a new name.
 
 ## Rebuilding the frame sequence
 

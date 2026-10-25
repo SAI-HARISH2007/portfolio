@@ -289,7 +289,7 @@
 
   @media (max-width: 899px) {
     .hero { height: 340vh; height: 340svh; }
-    .hero__name { font-size: clamp(4.2rem, 19.5vw, 9rem); }
+    .hero__name { font-size: clamp(2.6rem, 16vw, 9rem); justify-items: center; }
     .hero__knockout { padding-top: 24vh; }
     .hero__ui { bottom: 7.5rem; gap: 1.1rem; }
     .hero__lede { font-size: var(--step-0); }

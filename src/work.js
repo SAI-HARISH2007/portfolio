@@ -23,6 +23,9 @@ function panel(p, i, total) {
         <a class="link" href="${p.repo}">Source
           <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg>
         </a>
+        ${(p.links || []).map(([t, u]) => `<a class="link" href="${u}">${esc(t)}
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg>
+        </a>`).join('')}
         <div class="tags">${p.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
       </div>
     </div>
